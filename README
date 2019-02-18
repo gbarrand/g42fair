@@ -20,10 +20,10 @@
  The relevant codes are in the read() methods of the classes FairGeaMedia and FairGeoMedium.
 
   Units are the ones guessed from comments in the .hh and various .geo files found in the fairroot distribution. They are :
-     ENERGY eV
+     ENERGY     eV
      ABSORPTION mm
      EFFICIENCY mm
-     RINDEX1 (no unit).
+     RINDEX1    (no unit).
 
   The mapping Geant4/fairroot taken in write_media_geo() is :
      ENERGY       ppckov
@@ -37,4 +37,4 @@
  corresponding entry in the media.geo data schema.
 
    G.Barand 18/Feb/2019
-  
+
