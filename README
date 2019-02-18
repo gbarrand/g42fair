@@ -30,14 +30,14 @@
      EFFICIENCY   effic
      RINDEX1      rindex
 
-  IMPORTANT : there are no EFFICIENCY tables found for water in the MEMPHYS and WCSim codes. I (G.Barrand) set this to "1 mm".
+  IMPORTANT : there are no EFFICIENCY tables found for water in the MEMPHYS and WCSim codes. It had been set to "1 mm".
 
   IMPORTANT : the second line of each water description corresponds to :
      sensFlag : sensitivity flag.
      fldFlag  : field flag.
      fld      : Maximum field value in kilogauss
      epsil    : Boundary crossing precision (unit ?).
- There is no correspondance of these in the MEMPHYS and WCSim codes. I put these to "0 0 20. .001".
+ There is no correspondance of these in the MEMPHYS and WCSim codes. They had been set to "0 0 20. .001".
 
   IMPORTANT : there are RAYLEIGH tables found for water in the MEMPHYS and WCSim codes, but it does not seem to have a corresponding entry in the media.geo FairRoot data schema.
 
