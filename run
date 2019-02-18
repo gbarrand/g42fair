@@ -3,7 +3,11 @@
 ./check_app geant4-config 'geant4-config program not found. You have to "source setup" geant4.'
 build_status=$?;if [ ${build_status} != 0 ] ; then exit ${build_status};fi
 
-export DYLD_LIBRARY_PATH="`geant4-config --prefix`"/lib
+if [ `uname` = Darwin ] ; then
+  export DYLD_LIBRARY_PATH="`geant4-config --prefix`"/lib
+else
+  export LD_LIBRARY_PATH="`geant4-config --prefix`"/lib
+fi
 
 ./media_geo
 
