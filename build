@@ -1,6 +1,7 @@
 #!/bin/sh -f
 
 ./check_app geant4-config 'geant4-config program not found. You have to "source setup" geant4.'
+build_status=$?;if [ ${build_status} != 0 ] ; then exit ${build_status};fi
 
 cppflags="`geant4-config --cflags`"
 libs="`geant4-config --libs`"
