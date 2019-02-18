@@ -4,7 +4,7 @@
  build and run :
  -------------
    The build sh script uses "geant4-config" to build the "media_geo" program. You have to "source setup" geant4 before using it.
-   The run script run it. output are done on stdout.
+   The run script runs it. output are done on stdout.
 
  Some explanations :
  -----------------
