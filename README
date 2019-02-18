@@ -1,5 +1,7 @@
 
-  media_geo.cpp contains "ConstructMaterials" code extracted from MEMPHYS and WCSim Geant4 simulation applications.
+   media_geo.cpp contains "ConstructMaterials" code extracted from MEMPHYS and WCSim Geant4 simulation applications.
+  It produces output at the fairroot "media.geo" ascii format; "MEMPHYS_Water" for the water described in MEMPHYS, and
+  "WCSim_Water" for the one of WCSim.
 
  build and run :
  -------------
