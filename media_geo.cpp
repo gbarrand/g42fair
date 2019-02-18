@@ -4,7 +4,6 @@
 //exlib_build_use geant4 inlib
 
 #include <G4Material.hh>
-//#include <G4Element.hh>
 #include <G4UnitsTable.hh>
 
 //////////////////////////////////////////////////////////////////////////////
