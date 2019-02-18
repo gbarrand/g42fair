@@ -1,0 +1,6 @@
+#!/bin/sh -f
+
+cppflags="`geant4-config --cflags`"
+libs="`geant4-config --libs`"
+
+c++ -o media_geo ${cppflags} media_geo.cpp ${libs}
