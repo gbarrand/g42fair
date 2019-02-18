@@ -1,17 +1,14 @@
 
    media_geo.cpp contains "ConstructMaterials" code extracted from MEMPHYS and WCSim Geant4 simulation applications.
-  The program produces output at the FairRoot "media.geo" ascii format for the medium "MEMPHYS_Water" of water described in MEMPHYS, and
-  "WCSim_Water" for water described in WCSim.
+  The program produces output at the FairRoot "media.geo" ascii format for the medium "MEMPHYS_Water" of water described in MEMPHYS, and "WCSim_Water" for water described in WCSim.
 
  build and run :
  -------------
-   The build sh script uses "geant4-config" to build the "media_geo" program. You have to "source setup" geant4 before using it.
-   The run script runs it. output are done on stdout.
+   The build sh script uses "geant4-config" to build the "media_geo" program. You have to "source setup" geant4 before using it. The run script runs it. output are done on stdout.
 
  Some explanations :
  -----------------
-  The function write_media_geo() takes a G4Material as first arguments along with tables ENERGY, ABSORPTION, EFFICIENCY, RINDEX1.
-  The G4Material and tables are the one describing water for a Cherenkov detector.
+  The function write_media_geo() takes a G4Material as first arguments along with tables ENERGY, ABSORPTION, EFFICIENCY, RINDEX1. The G4Material and tables are the one describing water for a Cherenkov detector.
 
   The "media.geo" ascii output are produced on stdout according to the "data schema" found in the FairRoot codes :
      fairroot/geobase/FairGeoMedia.h
@@ -21,7 +18,7 @@
      fairroot/geobase/FairGeoMedium.cxx
  The relevant codes are in the read() methods of the classes FairGeaMedia and FairGeoMedium.
 
-  Units are the ones guessed from comments in the .hh and various .geo files found in the FairRoot distribution. They are :
+  Units are the ones guessed from comments in the .h and various .geo files found in the FairRoot distribution. They are :
      ENERGY     eV
      ABSORPTION mm
      EFFICIENCY mm
@@ -42,8 +39,7 @@
      epsil    : Boundary crossing precision (unit ?).
  There is no correspondance of these in the MEMPHYS and WCSim codes. I put these to "0 0 20. .001".
 
-  IMPORTANT : there are RAYLEIGH tables found for water in the MEMPHYS and WCSim codes, but it does not seem to have a
- corresponding entry in the media.geo FairRoot data schema.
+  IMPORTANT : there are RAYLEIGH tables found for water in the MEMPHYS and WCSim codes, but it does not seem to have a corresponding entry in the media.geo FairRoot data schema.
 
    G.Barand 18/Feb/2019
 
