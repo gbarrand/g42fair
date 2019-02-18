@@ -9,5 +9,10 @@ else
   export LD_LIBRARY_PATH="`geant4-config --prefix`"/lib
 fi
 
+if [ ! -x ./media_geo ] ; then
+  echo 'media_geo not built.'
+  exit
+fi
+
 ./media_geo
 
