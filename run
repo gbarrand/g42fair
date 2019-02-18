@@ -6,7 +6,7 @@ build_status=$?;if [ ${build_status} != 0 ] ; then exit ${build_status};fi
 if [ `uname` = Darwin ] ; then
   export DYLD_LIBRARY_PATH="`geant4-config --prefix`"/lib
 else
-  export LD_LIBRARY_PATH="`geant4-config --prefix`"/lib
+  export LD_LIBRARY_PATH="`geant4-config --prefix`"/lib64
 fi
 
 if [ ! -x ./media_geo ] ; then
