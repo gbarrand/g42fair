@@ -1,0 +1,30 @@
+
+  media_geo.cpp contains "ConstructMaterials" code extracted from MEMPHYS and WCSim Geant4 simulation applications.
+
+ The function write_media_geo() takes a G4Material as first arguments along with tables ENERGY, ABSORPTION, EFFICIENCY, RINDEX1.
+ The G4Material and tables are the one describing water for a Cherenkov detector.
+
+  The "media.geo" ascii output are produced on std::cout according to the "data schema" found in the fairroot codes :
+     fairroot/geobase/FairGeoMedia.h
+     fairroot/geobase/FairGeoMedia.cxx
+ and 
+     fairroot/geobase/FairGeoMedium.h
+     fairroot/geobase/FairGeoMedium.cxx
+ in the read() methods of the classes FairGeaMedia and FairGeoMedium.
+
+  Units are the ones "guessed" from comments in the .hh. There are :
+     ENERGY eV
+     ABSORPTION mm
+     EFFICIENCY mm
+     RINDEX1 (no unit).
+
+  The mapping Geant4/fairroot taken is :
+     ENERGY       ppckov
+     ABSORPTION   absco
+     EFFICIENCY   effic
+     RINDEX1      rindex
+
+  IMPORTANT : there are no EFFICIENCY tables found for water in the MEMPHYS and WCSim codes. I (G.Barrand) set this to "1 mm".
+
+  IMPORTANT : there are RAYLEIGH tables found for water in the MEMPHYS and WCSim codes, but it does not seem to have a
+ corresponding entry in the media.geo data schema.
